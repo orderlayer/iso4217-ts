@@ -1,6 +1,6 @@
 {
   "name": "@orderlayer/iso4217-ts",
-  "version": "2026.4.0",
+  "version": "2026.4.1",
   "description": "Lookup currency codes based on ISO 4217",
   "type": "module",
   "main": "dist/index.cjs",
