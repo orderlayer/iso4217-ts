@@ -27,11 +27,6 @@ jobs:
 
       - run: npm run build
 
-      - name: Set version from release tag
-        env:
-          TAG: ${{ github.ref_name }}
-        run: npm version "${TAG#v}" --no-git-tag-version
-
-      - run: npm publish --access public
+- run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ''
