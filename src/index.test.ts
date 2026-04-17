@@ -5,7 +5,7 @@ describe("currency-codes", () => {
   it("looks up by code", () => {
     const eur = code("EUR");
     expect(eur).toBeDefined();
-    expect(eur!.countries).toHaveLength(36);
+    expect(eur!.countries).toHaveLength(37);
   });
 
   it("returns digits for a code", () => {
@@ -29,25 +29,25 @@ describe("currency-codes", () => {
   });
 
   it("lists all codes", () => {
-    expect(codes()).toHaveLength(179);
+    expect(codes()).toHaveLength(178);
   });
 
   it("lists all countries", () => {
-    expect(countries()).toHaveLength(260);
+    expect(countries()).toHaveLength(261);
   });
 
   it("lists all numbers", () => {
     const nums = numbers();
-    expect(nums).toHaveLength(179);
+    expect(nums).toHaveLength(178);
     expect(nums[0]).toBe("784");
   });
 
   it("exposes raw data", () => {
-    expect(data).toHaveLength(179);
+    expect(data).toHaveLength(178);
   });
 
   it("exposes publish date", () => {
-    expect(publishDate).toBe("2024-06-25");
+    expect(publishDate).toBe("2026-01-01");
   });
 
   it("returns undefined for unknown code", () => {

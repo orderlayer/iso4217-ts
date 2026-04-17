@@ -1,6 +1,6 @@
 # iso4217-ts
 
-> Sponsored by [orderlayer.com](https://orderlayer.com)
+> Sponsored by [orderlayer.com](https://orderlayer.com): Digital Ordering for Restaurants
 
 TypeScript-first module to look up currency codes based on the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) standard. Zero runtime dependencies.
 
@@ -82,7 +82,7 @@ import { data } from "iso4217-ts";
 
 ```ts
 publishDate;
-// "2024-06-25"
+// "2026-01-01"
 ```
 
 ## Types
@@ -97,6 +97,45 @@ interface CurrencyCodeRecord {
   currency: string;
   countries: string[];
 }
+```
+
+## Zod integration
+
+Use `codes()` to build a Zod enum for validating currency codes at runtime:
+
+```ts
+import { z } from "zod";
+import { codes, code } from "iso4217-ts";
+
+// Validate that a string is a valid ISO 4217 currency code
+const currencyCodeSchema = z.enum(codes() as [string, ...string[]]);
+
+currencyCodeSchema.parse("EUR"); // "EUR"
+currencyCodeSchema.parse("FAKE"); // throws ZodError
+```
+
+Build a full currency record schema with lookup:
+
+```ts
+const currencySchema = z
+  .string()
+  .refine((val) => code(val) !== undefined, { message: "Invalid currency code" })
+  .transform((val) => code(val)!);
+
+const result = currencySchema.parse("USD");
+// { code: "USD", number: "840", digits: 2, currency: "US Dollar", countries: [...] }
+```
+
+Use it in a larger schema:
+
+```ts
+const paymentSchema = z.object({
+  amount: z.number().positive(),
+  currency: z.enum(codes() as [string, ...string[]]),
+});
+
+type Payment = z.infer<typeof paymentSchema>;
+// { amount: number; currency: "AED" | "AFN" | ... | "ZMW" }
 ```
 
 ## Updating the data

@@ -1,10 +1,9 @@
 // ISO 4217 currency codes data
 // https://www.iso.org/iso-4217-currency-codes.html
-// Data last updated 2024-06-25
+// Data last updated 2026-01-01
 
 import type { CurrencyCodeRecord } from "./types";
-
-export const publishDate = "2024-06-25";
+export const publishDate = "2026-01-01";
 
 export const data: CurrencyCodeRecord[] = [
   {
@@ -44,16 +43,6 @@ export const data: CurrencyCodeRecord[] = [
     ]
   },
   {
-    "code": "ANG",
-    "number": "532",
-    "digits": 2,
-    "currency": "Netherlands Antillean Guilder",
-    "countries": [
-      "Curaçao",
-      "Sint Maarten (Dutch Part)"
-    ]
-  },
-  {
     "code": "AOA",
     "number": "973",
     "digits": 2,
@@ -80,7 +69,7 @@ export const data: CurrencyCodeRecord[] = [
       "Australia",
       "Christmas Island",
       "Cocos (Keeling) Islands (The)",
-      "Heard Island and Mcdonald Islands",
+      "Heard Island And Mcdonald Islands",
       "Kiribati",
       "Nauru",
       "Norfolk Island",
@@ -111,7 +100,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Convertible Mark",
     "countries": [
-      "Bosnia and Herzegovina"
+      "Bosnia And Herzegovina"
     ]
   },
   {
@@ -130,15 +119,6 @@ export const data: CurrencyCodeRecord[] = [
     "currency": "Taka",
     "countries": [
       "Bangladesh"
-    ]
-  },
-  {
-    "code": "BGN",
-    "number": "975",
-    "digits": 2,
-    "currency": "Bulgarian Lev",
-    "countries": [
-      "Bulgaria"
     ]
   },
   {
@@ -264,7 +244,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Congolese Franc",
     "countries": [
-      "Congo (The Democratic Republic of The)"
+      "Congo (The Democratic Republic Of The)"
     ]
   },
   {
@@ -347,15 +327,6 @@ export const data: CurrencyCodeRecord[] = [
     "currency": "Costa Rican Colon",
     "countries": [
       "Costa Rica"
-    ]
-  },
-  {
-    "code": "CUC",
-    "number": "931",
-    "digits": 2,
-    "currency": "Peso Convertible",
-    "countries": [
-      "Cuba"
     ]
   },
   {
@@ -456,10 +427,11 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Euro",
     "countries": [
-      "Åland Islands",
+      "åLand Islands",
       "Andorra",
       "Austria",
       "Belgium",
+      "Bulgaria",
       "Croatia",
       "Cyprus",
       "Estonia",
@@ -487,7 +459,7 @@ export const data: CurrencyCodeRecord[] = [
       "Réunion",
       "Saint Barthélemy",
       "Saint Martin (French Part)",
-      "Saint Pierre and Miquelon",
+      "Saint Pierre And Miquelon",
       "San Marino",
       "Slovakia",
       "Slovenia",
@@ -519,9 +491,9 @@ export const data: CurrencyCodeRecord[] = [
     "currency": "Pound Sterling",
     "countries": [
       "Guernsey",
-      "Isle of Man",
+      "Isle Of Man",
       "Jersey",
-      "United Kingdom of Great Britain and Northern Ireland (The)"
+      "United Kingdom Of Great Britain And Northern Ireland (The)"
     ]
   },
   {
@@ -1011,7 +983,7 @@ export const data: CurrencyCodeRecord[] = [
     "countries": [
       "Bouvet Island",
       "Norway",
-      "Svalbard and Jan Mayen"
+      "Svalbard And Jan Mayen"
     ]
   },
   {
@@ -1213,7 +1185,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Saint Helena Pound",
     "countries": [
-      "Saint Helena, Ascension and Tristan Da Cunha"
+      "Saint Helena, Ascension And Tristan Da Cunha"
     ]
   },
   {
@@ -1258,7 +1230,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Dobra",
     "countries": [
-      "Sao Tome and Principe"
+      "Sao Tome And Principe"
     ]
   },
   {
@@ -1348,7 +1320,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "Trinidad and Tobago Dollar",
     "countries": [
-      "Trinidad and Tobago"
+      "Trinidad And Tobago"
     ]
   },
   {
@@ -1357,7 +1329,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "New Taiwan Dollar",
     "countries": [
-      "Taiwan (Province of China)"
+      "Taiwan (Province Of China)"
     ]
   },
   {
@@ -1394,7 +1366,7 @@ export const data: CurrencyCodeRecord[] = [
     "currency": "US Dollar",
     "countries": [
       "American Samoa",
-      "Bonaire, Sint Eustatius and Saba",
+      "Bonaire, Sint Eustatius And Saba",
       "British Indian Ocean Territory (The)",
       "Ecuador",
       "El Salvador",
@@ -1406,12 +1378,12 @@ export const data: CurrencyCodeRecord[] = [
       "Palau",
       "Panama",
       "Puerto Rico",
-      "Timor-Leste",
-      "Turks and Caicos Islands (The)",
+      "Timor-leste",
+      "Turks And Caicos Islands (The)",
       "United States Minor Outlying Islands (The)",
-      "United States of America (The)",
+      "United States Of America (The)",
       "Virgin Islands (British)",
-      "Virgin Islands (u.s.)"
+      "Virgin Islands (U.s.)"
     ]
   },
   {
@@ -1420,7 +1392,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 2,
     "currency": "US Dollar (Next day)",
     "countries": [
-      "United States of America (The)"
+      "United States Of America (The)"
     ]
   },
   {
@@ -1505,6 +1477,15 @@ export const data: CurrencyCodeRecord[] = [
     ]
   },
   {
+    "code": "XAD",
+    "number": "396",
+    "digits": 2,
+    "currency": "Arab Accounting Dinar",
+    "countries": [
+      "Arab Monetary Fund"
+    ]
+  },
+  {
     "code": "XAF",
     "number": "950",
     "digits": 0,
@@ -1579,13 +1560,23 @@ export const data: CurrencyCodeRecord[] = [
     "currency": "East Caribbean Dollar",
     "countries": [
       "Anguilla",
-      "Antigua and Barbuda",
+      "Antigua And Barbuda",
       "Dominica",
       "Grenada",
       "Montserrat",
-      "Saint Kitts and Nevis",
+      "Saint Kitts And Nevis",
       "Saint Lucia",
-      "Saint Vincent and the Grenadines"
+      "Saint Vincent And The Grenadines"
+    ]
+  },
+  {
+    "code": "XCG",
+    "number": "532",
+    "digits": 2,
+    "currency": "Caribbean Guilder",
+    "countries": [
+      "Curaçao",
+      "Sint Maarten (Dutch Part)"
     ]
   },
   {
@@ -1606,7 +1597,7 @@ export const data: CurrencyCodeRecord[] = [
       "Benin",
       "Burkina Faso",
       "Côte D'ivoire",
-      "Guinea-Bissau",
+      "Guinea-bissau",
       "Mali",
       "Niger (The)",
       "Senegal",
@@ -1630,7 +1621,7 @@ export const data: CurrencyCodeRecord[] = [
     "countries": [
       "French Polynesia",
       "New Caledonia",
-      "Wallis and Futuna"
+      "Wallis And Futuna"
     ]
   },
   {
@@ -1666,7 +1657,7 @@ export const data: CurrencyCodeRecord[] = [
     "digits": 0,
     "currency": "ADB Unit of Account",
     "countries": [
-      "Member Countries of the African Development Bank Group"
+      "Member Countries Of The African Development Bank Group"
     ]
   },
   {
