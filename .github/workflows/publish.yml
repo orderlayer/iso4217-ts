@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org
 
       - run: npm ci
@@ -32,4 +32,4 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: npm version "${TAG#v}" --no-git-tag-version
 
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public
