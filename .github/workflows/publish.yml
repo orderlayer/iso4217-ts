@@ -33,3 +33,5 @@ jobs:
         run: npm version "${TAG#v}" --no-git-tag-version
 
       - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ''
