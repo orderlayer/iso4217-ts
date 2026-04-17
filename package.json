@@ -1,0 +1,58 @@
+{
+  "name": "@orderlayer/iso4217-ts",
+  "version": "2026.4.0",
+  "description": "Lookup currency codes based on ISO 4217",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orderlayer/iso4217-ts.git"
+  },
+  "keywords": [
+    "iso4217",
+    "iso",
+    "4217",
+    "currency",
+    "currencies",
+    "code",
+    "codes",
+    "lookup",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "iso:fetch-xml": "tsx scripts/fetch-iso-4217-xml.ts",
+    "iso:ingest-xml": "tsx scripts/ingest-iso-4217-xml.ts",
+    "iso": "npm run iso:fetch-xml && npm run iso:ingest-xml"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.4",
+    "tsup": "^8",
+    "tsx": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.4",
+    "xml2js": "^0.6"
+  },
+  "license": "MIT"
+}
