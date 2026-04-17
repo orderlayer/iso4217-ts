@@ -34,7 +34,7 @@ function ingestEntry(entry: XmlEntry): CurrencyRecord {
   };
 }
 
-const input = "iso-4217-list-one.xml";
+const input = "iso-4217.xml";
 const xml = readFileSync(input, "utf-8");
 
 const result = await parseStringPromise(xml, {
