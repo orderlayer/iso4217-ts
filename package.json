@@ -54,5 +54,6 @@
     "vitest": "^4.1.4",
     "xml2js": "^0.6"
   },
+  "homepage": "https://github.com/orderlayer/iso4217-ts",
   "license": "MIT"
 }
